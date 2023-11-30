@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteOne.Master.cs" Inherits="BarunnIntergrationService.Master.SiteOne" ClientIDMode="Static" %>
+<!DOCTYPE html>
+<html lang="ko">
+<head runat="server">
+    <%="\n" %>
+    <asp:Literal ID="ltrMasterPageMetaTag" runat="server"></asp:Literal>
+
+    <title>바른 ONE 회원가입</title><%="\n" %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <asp:Literal ID="ltrMasterPageStyleSheet" runat="server"></asp:Literal>
+
+    <script type="text/javascript" src="/resources/js/jquery_1.9.1.min.js"></script><!-- 확인:jquery 버젼 정의 -->
+    <script type="text/javascript" src="/resources/js/common.js"></script><!-- 개발 JS 정의 -->
+    <script type="text/javascript" src="/resources/js/common_ux.js"></script><!--  publish JS 정의 -->
+    <script type="text/javascript" src="/resources/js/ui/jquery.ezmark.min.js"></script><!-- 라디오,체크 -->
+    <script type="text/javascript" src="/resources/js/ui/jquery.banner.js"></script><!-- 롤링배너 -->
+    <script type="text/javascript" src="/resources/js/ui/jquery.selectric.min.js"></script><!-- select -->
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+
+
+	<!-- 20210621 마케팅기획팀 요청-->
+	<!-- Global site tag (gtag.js) - Google Ads: 1014665508 -->
+	<%--<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1014665508"></script>--%>
+	<%--<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'AW-1014665508');
+	</script>
+	<!-- Event snippet for 21년_회원가입완료 conversion page -->
+	<script>
+		window.addEventListener('load',function(){
+			var join_result = /BarunsonForRegistrationComplete/.test(window.location.pathname)
+			 if(join_result){
+				gtag('event', 'conversion', {'send_to': 'AW-1014665508/CtjQCIOAkcUCEKSi6uMD'});}
+	});
+	</script>
+	<!-- Event snippet for 21년_구매완료 conversion page -->
+	<script>
+		window.addEventListener('load',function(){
+				var invitation = /gnr\/order_commit/.test(window.location.pathname)
+				if(invitation){
+					gtag('event', 'conversion', {'send_to': 'AW-1014665508/DzQuCPGoksUCEKSi6uMD'});}
+	});
+	</script>
+	<!-- Event snippet for 21년_샘플신청완료 conversion page -->
+	<script>
+		window.addEventListener('load',function(){
+				var sample = /sample\/step2/.test(window.location.pathname)
+				if(sample){
+					gtag('event', 'conversion', {'send_to': 'AW-1014665508/4CaGCPyY7cQCEKSi6uMD'});}
+	});
+	</script>
+	<!-- Event snippet for 21년_샘플신청완료(회원) conversion page -->
+	<script>
+        window.addEventListener('load', function () {
+            var sample_member = /sample\/step3/.test(window.location.pathname)
+            if (sample_member) {
+                gtag('event', 'conversion', { 'send_to': 'AW-1014665508/7xCuCJCw7cQCEKSi6uMD' });
+            }
+        });
+    </script>--%>
+
+</head>
+<body class="welcome_p" ID="MasterBody" runat="server">
+
+    <form id="MainForm" name="MainForm" runat="server" method="post">
+
+
+<% /* 엔터키 자동 SUBMIT 방지 */ %>
+<div style="display:none;">
+    <asp:Button ID="btnNull" runat="server" OnClientClick="return false" />
+
+</div>
+<% /* //엔터키 자동 SUBMIT 방지 */ %>
+
+    <div class="wrap">
+	    <div class="step_a">
+            <asp:Literal ID="ContentNavigation" runat="server"> </asp:Literal>
+	    </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+    </form>
+    <asp:Literal ID="ltrMasterPageCPClientRequestForm" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrMasterPageCPClientResponseForm" runat="server"></asp:Literal>
+
+    <asp:Literal ID="ltrBizSpringLoggerScriptForRegistrationComplete" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrBizSpringLoggerScript" runat="server"></asp:Literal>
+
+
+    <% /* // 공통 스크립트 전에 회원가입/주문등 들어가야되는 에이스 카운터 스크립트 넣기  */ %>
+    <asp:Literal ID="ltrScriptAceCounterTagBefore" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrScriptAceCounterTag" runat="server"></asp:Literal>
+    <% /* //에이스 카운터 스크립트  */ %>
+
+</body>
+</html>

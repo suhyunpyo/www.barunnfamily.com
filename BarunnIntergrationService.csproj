@@ -1,0 +1,1029 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{112E4D56-EFA4-4ACB-93FB-DAA0F8A0E7E3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BarunnIntergrationService</RootNamespace>
+    <AssemblyName>BarunnIntergrationService</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="health.aspx" />
+    <Content Include="Mail\Template\RegistrationCompleteForExistingMember.html" />
+    <Content Include="Mail\Template\RegistrationComplete.html" />
+    <Content Include="Member\Agreement.aspx" />
+    <Content Include="Member\Agreement_NEW.aspx" />
+    <Content Include="Member\BarunsonMallForRegistrationComplete.aspx" />
+    <Content Include="Member\BarunsonMallForCustomerInformation.aspx" />
+    <Content Include="Member\BarunsonMcardCompleteForExistingMember.aspx" />
+    <Content Include="Member\BarunsonMcardForCustomerInformation.aspx" />
+    <Content Include="Member\BarunsonMcardForRegistrationComplete.aspx" />
+    <Content Include="Member\BhandsCompleteForExistingMember.aspx" />
+    <Content Include="Member\BarunsonForCustomerInformation.aspx" />
+    <Content Include="Member\BarunsonmallCompleteForExistingMember.aspx" />
+    <Content Include="Member\MemberPolicyHistory.aspx" />
+    <Content Include="Member\CustomerInformation_NEW.aspx" />
+    <Content Include="Member\gsCompleteForExistingMember.aspx" />
+    <Content Include="Member\GshopAgreement.aspx" />
+    <Content Include="Member\GshopForCustomerInformation.aspx" />
+    <Content Include="Member\GshopForRegistrationComplete.aspx" />
+    <Content Include="Member\PremierCompleteForExistingMember.aspx" />
+    <Content Include="Member\ThecardCompleteForExistingMember.aspx" />
+    <Content Include="Member\PremierForRegistrationComplete.aspx" />
+    <Content Include="Member\CompleteForExistingMember.aspx" />
+    <Content Include="Member\BhandsForRegistrationComplete.aspx" />
+    <Content Include="Member\BarunsonForRegistrationComplete.aspx" />
+    <Content Include="Member\ThecardForRegistrationComplete.aspx" />
+    <Content Include="Member\ThecardForCustomerInformation.aspx" />
+    <Content Include="Member\BhandsForCustomerInformation.aspx" />
+    <Content Include="Member\CPClientReturnProcessOnly.aspx" />
+    <Content Include="Member\IPINReturnProcess.aspx" />
+    <Content Include="Member\Main.aspx" />
+    <Content Include="Member\CPClientReturnProcess.aspx" />
+    <Content Include="Member\SignInForCertification.aspx" />
+    <Content Include="Member\SignInForEnterCustomerInformation.aspx" />
+    <Content Include="Member\SignInForExistingMember.aspx" />
+    <Content Include="Member\SignInForRegistrationComplete.aspx" />
+    <Content Include="Member\SignInForRegistrationCompleteForExistingMember.aspx" />
+    <Content Include="Member\SignInForTermsAgreementPreview.aspx" />
+    <Content Include="Member\SignInForTermsAgreement_20170427.aspx" />
+    <Content Include="Member\SignInForTermsAgreement.aspx" />
+    <Content Include="MyPage\UserProfileModify.aspx" />
+    <Content Include="MyPage\UserSecession.aspx" />
+    <Content Include="MyPage\UserSecessionComplete.aspx" />
+    <Content Include="Resources\css\bootstrap-datepicker.min.css" />
+    <Content Include="Resources\css\bootstrap-extend.css" />
+    <Content Include="Resources\css\bootstrap-theme.css" />
+    <Content Include="Resources\css\bootstrap.css" />
+    <Content Include="Resources\css\common_origin.css" />
+    <Content Include="Resources\css\common.css" />
+    <Content Include="Resources\css\common_bhands.css" />
+    <Content Include="Resources\css\common_thecard.css" />
+    <Content Include="Resources\css\gshop\common.css" />
+    <Content Include="Resources\css\gshop\extra_font.css" />
+    <Content Include="Resources\css\gshop\login.css" />
+    <Content Include="Resources\css\gshop\register.css" />
+    <Content Include="Resources\css\gshop\reset.css" />
+    <Content Include="Resources\css\images\animated-overlay.gif" />
+    <Content Include="Resources\css\images\cal_logo.png" />
+    <Content Include="Resources\css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Resources\css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Resources\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Resources\css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Resources\css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Resources\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Resources\css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Resources\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Resources\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Resources\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Resources\css\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Resources\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="Resources\css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Resources\css\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Resources\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Resources\css\jquery-ui-1.10.1.css" />
+    <Content Include="Resources\css\layout_member_origin.css" />
+    <Content Include="Resources\css\layout_member.css" />
+    <Content Include="Resources\css\layout_member_bhands.css" />
+    <Content Include="Resources\css\layout_member_thecard.css" />
+    <Content Include="Resources\css\layout_mobile_origin.css" />
+    <Content Include="Resources\css\layout_mobile.css" />
+    <Content Include="Resources\css\layout_mobile_bhands.css" />
+    <Content Include="Resources\css\layout_mobile_thecard.css" />
+    <Content Include="Resources\css\layout_mypage.css" />
+    <Content Include="Resources\css\layout_premierpaper.css" />
+    <Content Include="Resources\css\layout_systemcheck.css" />
+    <Content Include="Resources\css\melon.datepicker.css" />
+    <Content Include="Resources\css\Member\Agreement.css" />
+    <Content Include="Resources\css\Member\BarunsonForCustomerInformation.css" />
+    <Content Include="Resources\css\Member\PremierForCustomerInformation.css" />
+    <Content Include="Resources\css\Member\ThecardForCustomerInformation.css" />
+    <Content Include="Resources\css\Member\BhandsForCustomerInformation.css" />
+    <Content Include="Resources\css\nigran.datepicker.css" />
+    <Content Include="Resources\css\swiper.min.css" />
+    <Content Include="Resources\css\ui\selectric_default.css" />
+    <Content Include="Resources\data\banner\member\ban_850_test1.jpg" />
+    <Content Include="Resources\data\banner\member\ban_850_test2.jpg" />
+    <Content Include="Resources\data\banner\member\ban_850_test3.jpg" />
+    <Content Include="Resources\data\banner\member\ban_850_test4.jpg" />
+    <Content Include="Resources\data\banner\member\ban_850_test5.jpg" />
+    <Content Include="Resources\data\banner\member\ban_850_test6.jpg" />
+    <Content Include="Resources\data\pushmail\common\bg_border.png" />
+    <Content Include="Resources\data\pushmail\common\bg_welcome.jpg" />
+    <Content Include="Resources\data\pushmail\common\bg_welcome2.jpg" />
+    <Content Include="Resources\data\pushmail\common\celemo_img01.png" />
+    <Content Include="Resources\data\pushmail\common\celemo_img02.png" />
+    <Content Include="Resources\data\pushmail\common\celemo_tit.png" />
+    <Content Include="Resources\data\pushmail\common\ci_barunn.png" />
+    <Content Include="Resources\data\pushmail\common\logo_barunn_foot.png" />
+    <Content Include="Resources\data\pushmail\common\tit_barunnfamilysite.png" />
+    <Content Include="Resources\data\pushmail\common\tit_giftshop.png" />
+    <Content Include="Resources\data\pushmail\common\tit_weddingcard.png" />
+    <Content Include="Resources\data\pushmail\img\txt_01.png" />
+    <Content Include="Resources\img_inc\arrow_down.png" />
+    <Content Include="Resources\img_inc\barunsongshop.svg" />
+    <Content Include="Resources\img_inc\bg_pattern01.png" />
+    <Content Include="Resources\img_inc\bhandscard_logo.png" />
+    <Content Include="Resources\img_inc\bul_4x2.png" />
+    <Content Include="Resources\img_inc\bul_arrow1_right.png" />
+    <Content Include="Resources\img_inc\bul_arrow2_left.png" />
+    <Content Include="Resources\img_inc\bul_arrow2_right.png" />
+    <Content Include="Resources\img_inc\icon_calender.png" />
+    <Content Include="Resources\img_inc\icon_calender_premierpaper.png" />
+    <Content Include="Resources\img_inc\icon_calender_thecard.png" />
+    <Content Include="Resources\img_inc\icon_mark.png" />
+    <Content Include="Resources\img_inc\icon_mark_premierpaper.png" />
+    <Content Include="Resources\img_inc\icon_mark_thecard.png" />
+    <Content Include="Resources\img_inc\img_loading_20.gif" />
+    <Content Include="Resources\img_inc\img_loading_25.gif" />
+    <Content Include="Resources\img_inc\img_loading_36.gif" />
+    <Content Include="Resources\img_inc\line_1x10.png" />
+    <Content Include="Resources\img_inc\line_1x15.png" />
+    <Content Include="Resources\img_inc\line_1x50.png" />
+    <Content Include="Resources\img_inc\line_20x1.png" />
+    <Content Include="Resources\img_inc\line_20x1_2.png" />
+    <Content Include="Resources\img_inc\line_40x1.png" />
+    <Content Include="Resources\img_inc\line_box_rightbottom.png" />
+    <Content Include="Resources\img_inc\logo_barunn.png" />
+    <Content Include="Resources\img_inc\logo_barunsoncard.png" />
+    <Content Include="Resources\img_inc\logo_barunsoncard_28.png" />
+    <Content Include="Resources\img_inc\logo_barunsoncard_jehu.png" />
+    <Content Include="Resources\img_inc\logo_barunsonmall_jehu.png" />
+    <Content Include="Resources\img_inc\logo_bewedding.png" />
+    <Content Include="Resources\img_inc\logo_bewedding_28.png" />
+    <Content Include="Resources\img_inc\logo_bhandscard.png" />
+    <Content Include="Resources\img_inc\logo_bhands_28.png" />
+    <Content Include="Resources\img_inc\logo_celemo.png" />
+    <Content Include="Resources\img_inc\logo_celemo_28.png" />
+    <Content Include="Resources\img_inc\logo_premierpaper.png" />
+    <Content Include="Resources\img_inc\logo_premierpaper_28.png" />
+    <Content Include="Resources\img_inc\logo_thecard.png" />
+    <Content Include="Resources\img_inc\logo_thecard_28.png" />
+    <Content Include="Resources\img_inc\pop_close_icon.jpg" />
+    <Content Include="Resources\img_inc\set_check.png" />
+    <Content Include="Resources\img_inc\set_check_bhandscard.png" />
+    <Content Include="Resources\img_inc\set_check_new.png" />
+    <Content Include="Resources\img_inc\set_check_new_premierpaper.png" />
+    <Content Include="Resources\img_inc\set_check_thecard.png" />
+    <Content Include="Resources\img_inc\title_welcome.png" />
+    <Content Include="Resources\js\bootstrap-datepicker.min.js" />
+    <Content Include="Resources\js\bootstrap.min.js" />
+    <Content Include="Resources\js\common.js" />
+    <Content Include="Resources\js\common_ux.js" />
+    <Content Include="Resources\js\jquery-2.1.3.min.js" />
+    <Content Include="Resources\js\jquery-ui-1.10.1.min.js" />
+    <Content Include="Resources\js\jquery.postcode.app.js" />
+    <Content Include="Resources\js\jquery.postcode.js" />
+    <Content Include="Resources\js\jquery_1.9.1.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Resources\js\Member\Agreement.js" />
+    <Content Include="Resources\js\Member\BarunsonForCustomerInformation.js" />
+    <Content Include="Resources\js\Member\BhandsForCustomerInformation.js" />
+    <Content Include="Resources\js\Member\BarunsonMallForCustomerInformation.js" />
+    <Content Include="Resources\js\Member\PremierForCustomerInformation.js" />
+    <Content Include="Resources\js\Member\ThecardForCustomerInformation.js" />
+    <Content Include="Resources\js\swiper.min.js" />
+    <Content Include="Resources\js\ui\jquery.banner.js" />
+    <Content Include="Resources\js\ui\jquery.ezmark.min.js" />
+    <Content Include="Resources\js\ui\jquery.selectric.min.js" />
+    <Content Include="Resources\member\arrow.svg" />
+    <Content Include="Resources\member\barunsoncard.svg" />
+    <Content Include="Resources\member\barunsoncard_join_coupon.png" />
+    <Content Include="Resources\member\barunsonmcard.svg" />
+    <Content Include="Resources\member\bg_applycom.jpg" />
+    <Content Include="Resources\member\bg_welcome.jpg" />
+    <Content Include="Resources\member\bg_welcome_m.jpg" />
+    <Content Include="Resources\member\btn.svg" />
+    <Content Include="Resources\member\ico-x.svg" />
+    <Content Include="Resources\member\icon_ipin.png" />
+    <Content Include="Resources\member\icon_mobile.png" />
+    <Content Include="Resources\member\img.png" />
+    <Content Include="Resources\member\img_01.jpg" />
+    <Content Include="Resources\member\img_02.png" />
+    <Content Include="Resources\member\img_03.png" />
+    <Content Include="Resources\member\img_04.png" />
+    <Content Include="Resources\member\img_05.png" />
+    <Content Include="Resources\member\img_06.png" />
+    <Content Include="Resources\member\img_07.png" />
+    <Content Include="Resources\member\img_08.png" />
+    <Content Include="Resources\member\img_09.png" />
+    <Content Include="Resources\member\img_10.png" />
+    <Content Include="Resources\member\img_pstep2_1.png" />
+    <Content Include="Resources\member\img_pstep3_1.png" />
+    <Content Include="Resources\member\img_selectid.png" />
+    <Content Include="Resources\member\img_step1.png" />
+    <Content Include="Resources\member\img_step1_barunson.png" />
+    <Content Include="Resources\member\img_step2.png" />
+    <Content Include="Resources\member\img_step2_barunson.png" />
+    <Content Include="Resources\member\img_step3.png" />
+    <Content Include="Resources\member\img_step3_barunson.png" />
+    <Content Include="Resources\member\img_step4.png" />
+    <Content Include="Resources\member\img_top.jpg" />
+    <Content Include="Resources\member\img_top_bak.png" />
+    <Content Include="Resources\member\img_top.png" />
+    <Content Include="Resources\member\img_top_m.png" />
+    <Content Include="Resources\member\img_top_mo_bak.png" />
+    <Content Include="Resources\member\img_top_mo.png" />
+    <Content Include="Resources\member\info.svg" />
+    <Content Include="Resources\member\line_200x1.png" />
+    <Content Include="Resources\member\new\5145%403x.png" />
+    <Content Include="Resources\member\new\5146%403x.png" />
+    <Content Include="Resources\member\new\5147%403x.png" />
+    <Content Include="Resources\member\new\5148%403x.png" />
+    <Content Include="Resources\member\new\5149%403x.png" />
+    <Content Include="Resources\member\new\5150%403x.png" />
+    <Content Include="Resources\member\new\5151%403x.png" />
+    <Content Include="Resources\member\new\5152%403x.png" />
+    <Content Include="Resources\member\new\5152%403x_gshop.png" />
+    <Content Include="Resources\member\new\5174%403x_2.png" />
+    <Content Include="Resources\member\new\arrow.svg" />
+    <Content Include="Resources\member\new\barunsoncard.svg" />
+    <Content Include="Resources\member\new\barunsonmcard.svg" />
+    <Content Include="Resources\member\new\btn.svg" />
+    <Content Include="Resources\member\new\ico-x.svg" />
+    <Content Include="Resources\member\new\img.png" />
+    <Content Include="Resources\member\new\img_top.jpg" />
+    <Content Include="Resources\member\new\info.svg" />
+    <Content Include="Resources\member\new\premierpaper.svg" />
+    <Content Include="Resources\member\new\thecard.svg" />
+    <Content Include="Resources\member\new\tit_img.png" />
+    <Content Include="Resources\member\new\tooltip.svg" />
+    <Content Include="Resources\member\phone_img.png" />
+    <Content Include="Resources\member\phone_img_barunsoncard.png" />
+    <Content Include="Resources\member\phone_img_bhandscard.png" />
+    <Content Include="Resources\member\phone_img_premierpaper.png" />
+    <Content Include="Resources\member\phone_img_thecard.png" />
+    <Content Include="Resources\member\premierpaper.svg" />
+    <Content Include="Resources\member\shinhan_mo.jpg" />
+    <Content Include="Resources\member\shinhan_mo.png" />
+    <Content Include="Resources\member\shinhan_p.jpg" />
+    <Content Include="Resources\member\shinhan_p.png" />
+    <Content Include="Resources\member\shinhan_p_bhands.jpg" />
+    <Content Include="Resources\member\shinhan_p_bhands.png" />
+    <Content Include="Resources\member\thecard.svg" />
+    <Content Include="Resources\member\thecard_check.jpg" />
+    <Content Include="Resources\member\thecard_join.jpg" />
+    <Content Include="Resources\member\tit_barunnone_join.png" />
+    <Content Include="Resources\member\tit_barunnone_join_barunson.png" />
+    <Content Include="Resources\member\tooltip.svg" />
+    <Content Include="Resources\member\txt_applycom_1.png" />
+    <Content Include="Resources\member\txt_authentication01.png" />
+    <Content Include="Resources\member\txt_welcome_01.png" />
+    <Content Include="Resources\member\txt_welcome_01_m.png" />
+    <Content Include="Resources\member\txt_welcome_02.png" />
+    <Content Include="Resources\member\txt_welcome_03.png" />
+    <Content Include="Resources\mypage\icon_memleve.png" />
+    <Content Include="Resources\mypage\tit_member_leave.png" />
+    <Content Include="Resources\mypage\tit_member_modify.png" />
+    <Content Include="Resources\mypage\txt_member_leave_1.png" />
+    <Content Include="Resources\mypage\txt_member_leave_2.png" />
+    <Content Include="Resources\mypage\txt_member_leave_2_2.png" />
+    <Content Include="Resources\systemcheck\bg_01.png" />
+    <Content Include="Resources\systemcheck\img_footcopy.png" />
+    <Content Include="Resources\systemcheck\img_headcopy.png" />
+    <Content Include="Resources\systemcheck\img_headsubcopy.png" />
+    <Content Include="Resources\systemcheck\img_minilogo.png" />
+    <Content Include="Resources\systemcheck\img_monitor.gif" />
+    <Content Include="Resources\systemcheck\mglass.png" />
+    <Content Include="Resource\css\bootstrap-combined.min.css" />
+    <Content Include="Resource\css\bootstrap-extend.css" />
+    <Content Include="Resource\css\bootstrap-theme.css" />
+    <Content Include="Resource\css\bootstrap-theme.min.css" />
+    <Content Include="Resource\css\bootstrap-toggle.min.css" />
+    <Content Include="Resource\css\bootstrap.css" />
+    <Content Include="Resource\css\bootstrap.min.css" />
+    <Content Include="Resource\css\bootstrap2-toggle.min.css" />
+    <Content Include="Resource\css\images\animated-overlay.gif" />
+    <Content Include="Resource\css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Resource\css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Resource\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Resource\css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Resource\css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Resource\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Resource\css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Resource\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Resource\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Resource\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Resource\css\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Resource\css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Resource\css\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Resource\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Resource\css\jquery-ui-1.10.4.css" />
+    <Content Include="Resource\css\sh\shCore.css" />
+    <Content Include="Resource\css\sh\shCoreDefault.css" />
+    <Content Include="Resource\css\sh\shCoreDjango.css" />
+    <Content Include="Resource\css\sh\shCoreEclipse.css" />
+    <Content Include="Resource\css\sh\shCoreEmacs.css" />
+    <Content Include="Resource\css\sh\shCoreFadeToGrey.css" />
+    <Content Include="Resource\css\sh\shCoreMDUltra.css" />
+    <Content Include="Resource\css\sh\shCoreMidnight.css" />
+    <Content Include="Resource\css\sh\shCoreRDark.css" />
+    <Content Include="Resource\css\sh\shThemeDefault.css" />
+    <Content Include="Resource\css\sh\shThemeDjango.css" />
+    <Content Include="Resource\css\sh\shThemeEclipse.css" />
+    <Content Include="Resource\css\sh\shThemeEmacs.css" />
+    <Content Include="Resource\css\sh\shThemeFadeToGrey.css" />
+    <Content Include="Resource\css\sh\shThemeMDUltra.css" />
+    <Content Include="Resource\css\sh\shThemeMidnight.css" />
+    <Content Include="Resource\css\sh\shThemeRDark.css" />
+    <Content Include="Resource\css\simplePagination.css" />
+    <Content Include="Resource\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Resource\images\background.jpg" />
+    <Content Include="Resource\js\angular.min.js" />
+    <Content Include="Resource\js\bhands.acube.globalization.language.replace.js" />
+    <Content Include="Resource\js\bootstrap-toggle.min.js" />
+    <Content Include="Resource\js\bootstrap-tree.js" />
+    <Content Include="Resource\js\bootstrap.js" />
+    <Content Include="Resource\js\bootstrap2-toggle.min.js" />
+    <Content Include="Resource\js\common.js" />
+    <Content Include="Resource\js\jquery-1.10.2.js" />
+    <Content Include="Resource\js\jquery-ui-1.10.4.min.js" />
+    <Content Include="Resource\js\jquery.ajaxupload.js" />
+    <Content Include="Resource\js\jquery.autosize.js" />
+    <Content Include="Resource\js\jquery.bhands.fileuploader.js" />
+    <Content Include="Resource\js\jquery.cookie.js" />
+    <Content Include="Resource\js\jquery.pikachoose.full.js" />
+    <Content Include="Resource\js\jquery.raty.min.js" />
+    <Content Include="Resource\js\jquery.simplePagination.js" />
+    <Content Include="Resource\js\jquery.validate.js" />
+    <Content Include="Resource\js\json2.js" />
+    <Content Include="Resource\js\sh\shAutoloader.js" />
+    <Content Include="Resource\js\sh\shBrushAppleScript.js" />
+    <Content Include="Resource\js\sh\shBrushAS3.js" />
+    <Content Include="Resource\js\sh\shBrushBash.js" />
+    <Content Include="Resource\js\sh\shBrushColdFusion.js" />
+    <Content Include="Resource\js\sh\shBrushCpp.js" />
+    <Content Include="Resource\js\sh\shBrushCSharp.js" />
+    <Content Include="Resource\js\sh\shBrushCss.js" />
+    <Content Include="Resource\js\sh\shBrushDelphi.js" />
+    <Content Include="Resource\js\sh\shBrushDiff.js" />
+    <Content Include="Resource\js\sh\shBrushErlang.js" />
+    <Content Include="Resource\js\sh\shBrushGroovy.js" />
+    <Content Include="Resource\js\sh\shBrushJava.js" />
+    <Content Include="Resource\js\sh\shBrushJavaFX.js" />
+    <Content Include="Resource\js\sh\shBrushJScript.js" />
+    <Content Include="Resource\js\sh\shBrushPerl.js" />
+    <Content Include="Resource\js\sh\shBrushPhp.js" />
+    <Content Include="Resource\js\sh\shBrushPlain.js" />
+    <Content Include="Resource\js\sh\shBrushPowerShell.js" />
+    <Content Include="Resource\js\sh\shBrushPython.js" />
+    <Content Include="Resource\js\sh\shBrushRuby.js" />
+    <Content Include="Resource\js\sh\shBrushSass.js" />
+    <Content Include="Resource\js\sh\shBrushScala.js" />
+    <Content Include="Resource\js\sh\shBrushSql.js" />
+    <Content Include="Resource\js\sh\shBrushVb.js" />
+    <Content Include="Resource\js\sh\shBrushXml.js" />
+    <Content Include="Resource\js\sh\shCore.js" />
+    <Content Include="Resource\js\sh\shLegacy.js" />
+    <Content Include="Resource\js\temp.js" />
+    <Content Include="Resource\js\ZeroClipboard.js" />
+    <Content Include="Resource\js\ZeroClipboard.swf" />
+    <Content Include="UserControl\banner\AffiliatedBanner.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ApplicationContext.cs" />
+    <Compile Include="Common\Attribute\Require.cs" />
+    <Compile Include="Common\AuthManager.cs" />
+    <Compile Include="Common\Databases\DatabaseRowListCollection.cs" />
+    <Compile Include="Common\Databases\DatabaseSingleColumnResultModel.cs" />
+    <Compile Include="Common\Databases\DatabaseSingleRowCollection.cs" />
+    <Compile Include="Common\Databases\DataReaderUtillity.cs" />
+    <Compile Include="Common\Databases\DBHelper.cs" />
+    <Compile Include="Common\Databases\IDatabaseResultModel.cs" />
+    <Compile Include="Common\Databases\ShopDatabaseFactory.cs" />
+    <Compile Include="Common\Enum\SiteGroupType.cs" />
+    <Compile Include="Common\ExtensionMethod\HttpRequestExtension.cs" />
+    <Compile Include="Common\ExtensionMethod\HttpResponseExtension.cs" />
+    <Compile Include="Common\ExtensionMethod\StringExtension.cs" />
+    <Compile Include="Common\LoggerScript\AceCounterScript.cs" />
+    <Compile Include="Common\LoggerScript\BizSpringLoggerScript.cs" />
+    <Compile Include="Common\RequestResult.cs" />
+    <Compile Include="Common\ResultModel\UserCertificationInfo.cs" />
+    <Compile Include="Common\Utillity\AesUtility.cs" />
+    <Compile Include="Common\Utillity\BirthUtility.cs" />
+    <Compile Include="Common\Utillity\CastingUtillity.cs" />
+    <Compile Include="Common\Utillity\ClientScriptUtility.cs" />
+    <Compile Include="Common\Utillity\CookieUtility.cs" />
+    <Compile Include="Common\Utillity\HTTPRequestUtillity.cs" />
+    <Compile Include="Common\Utillity\PolicyTermsUtility.cs" />
+    <Compile Include="Common\Utillity\MDChoiceBannerUtility.cs" />
+    <Compile Include="Common\Utillity\UserCertificationLogUtility.cs" />
+    <Compile Include="Common\Utillity\NiceCPClientUtility.cs" />
+    <Compile Include="Common\Utillity\FileUtility.cs" />
+    <Compile Include="Common\Utillity\HttpContextUtility.cs" />
+    <Compile Include="Common\Utillity\LogUtility.cs" />
+    <Compile Include="Common\Utillity\NiceIPINUtility.cs" />
+    <Compile Include="Common\Utillity\SessionUtility.cs" />
+    <Compile Include="Common\Utillity\StringEnumUtility.cs" />
+    <Compile Include="Common\Utillity\StringExtractUtillity.cs" />
+    <Compile Include="Common\Utillity\UrlRouteUtility.cs" />
+    <Compile Include="Common\Utillity\WebRequestUtility.cs" />
+    <Compile Include="Common\Utillity\XMLUtillity.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="health.aspx.cs">
+      <DependentUpon>health.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="health.aspx.designer.cs">
+      <DependentUpon>health.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\GShop_SiteOne.Master.cs">
+      <DependentUpon>GShop_SiteOne.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\GShop_SiteOne.Master.designer.cs">
+      <DependentUpon>GShop_SiteOne.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\SiteOne.Master.cs">
+      <DependentUpon>SiteOne.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\SiteOne.Master.designer.cs">
+      <DependentUpon>SiteOne.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Agreement.aspx.cs">
+      <DependentUpon>Agreement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\Agreement.aspx.designer.cs">
+      <DependentUpon>Agreement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Agreement_NEW.aspx.cs">
+      <DependentUpon>Agreement_NEW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\Agreement_NEW.aspx.designer.cs">
+      <DependentUpon>Agreement_NEW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\BarunsonMallForRegistrationComplete.aspx.cs">
+      <DependentUpon>BarunsonMallForRegistrationComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\BarunsonMallForRegistrationComplete.aspx.designer.cs">
+      <DependentUpon>BarunsonMallForRegistrationComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\BarunsonMallForCustomerInformation.aspx.cs">
+      <DependentUpon>BarunsonMallForCustomerInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\BarunsonMallForCustomerInformation.aspx.designer.cs">
+      <DependentUpon>BarunsonMallForCustomerInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\BarunsonMcardCompleteForExistingMember.aspx.cs">
+      <DependentUpon>BarunsonMcardCompleteForExistingMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\BarunsonMcardCompleteForExistingMember.aspx.designer.cs">
+      <DependentUpon>BarunsonMcardCompleteForExistingMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\BarunsonMcardForCustomerInformation.aspx.cs">
+      <DependentUpon>BarunsonMcardForCustomerInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\BarunsonMcardForCustomerInformation.aspx.designer.cs">
+      <DependentUpon>BarunsonMcardForCustomerInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\BarunsonMcardForRegistrationComplete.aspx.cs">
+      <DependentUpon>BarunsonMcardForRegistrationComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\BarunsonMcardForRegistrationComplete.aspx.designer.cs">
+      <DependentUpon>BarunsonMcardForRegistrationComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\BhandsCompleteForExistingMember.aspx.cs">
+      <DependentUpon>BhandsCompleteForExistingMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\BhandsCompleteForExistingMember.aspx.designer.cs">
+      <DependentUpon>BhandsCompleteForExistingMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\BarunsonForCustomerInformation.aspx.cs">
+      <DependentUpon>BarunsonForCustomerInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\BarunsonForCustomerInformation.aspx.designer.cs">
+      <DependentUpon>BarunsonForCustomerInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\BarunsonmallCompleteForExistingMember.aspx.cs">
+      <DependentUpon>BarunsonmallCompleteForExistingMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\BarunsonmallCompleteForExistingMember.aspx.designer.cs">
+      <DependentUpon>BarunsonmallCompleteForExistingMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MemberPolicyHistory.aspx.cs">
+      <DependentUpon>MemberPolicyHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MemberPolicyHistory.aspx.designer.cs">
+      <DependentUpon>MemberPolicyHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\CustomerInformation_NEW.aspx.cs">
+      <DependentUpon>CustomerInformation_NEW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\CustomerInformation_NEW.aspx.designer.cs">
+      <DependentUpon>CustomerInformation_NEW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\gsCompleteForExistingMember.aspx.cs">
+      <DependentUpon>gsCompleteForExistingMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\gsCompleteForExistingMember.aspx.designer.cs">
+      <DependentUpon>gsCompleteForExistingMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\GshopAgreement.aspx.cs">
+      <DependentUpon>GshopAgreement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\GshopAgreement.aspx.designer.cs">
+      <DependentUpon>GshopAgreement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\GshopForCustomerInformation.aspx.cs">
+      <DependentUpon>GshopForCustomerInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\GshopForCustomerInformation.aspx.designer.cs">
+      <DependentUpon>GshopForCustomerInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\GshopForRegistrationComplete.aspx.cs">
+      <DependentUpon>GshopForRegistrationComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\GshopForRegistrationComplete.aspx.designer.cs">
+      <DependentUpon>GshopForRegistrationComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\PremierCompleteForExistingMember.aspx.cs">
+      <DependentUpon>PremierCompleteForExistingMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\PremierCompleteForExistingMember.aspx.designer.cs">
+      <DependentUpon>PremierCompleteForExistingMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\ThecardCompleteForExistingMember.aspx.cs">
+      <DependentUpon>ThecardCompleteForExistingMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\ThecardCompleteForExistingMember.aspx.designer.cs">
+      <DependentUpon>ThecardCompleteForExistingMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\PremierForRegistrationComplete.aspx.cs">
+      <DependentUpon>PremierForRegistrationComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\PremierForRegistrationComplete.aspx.designer.cs">
+      <DependentUpon>PremierForRegistrationComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\CompleteForExistingMember.aspx.cs">
+      <DependentUpon>CompleteForExistingMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\CompleteForExistingMember.aspx.designer.cs">
+      <DependentUpon>CompleteForExistingMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\BhandsForRegistrationComplete.aspx.cs">
+      <DependentUpon>BhandsForRegistrationComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\BhandsForRegistrationComplete.aspx.designer.cs">
+      <DependentUpon>BhandsForRegistrationComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\BarunsonForRegistrationComplete.aspx.cs">
+      <DependentUpon>BarunsonForRegistrationComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\BarunsonForRegistrationComplete.aspx.designer.cs">
+      <DependentUpon>BarunsonForRegistrationComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\ThecardForRegistrationComplete.aspx.cs">
+      <DependentUpon>ThecardForRegistrationComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\ThecardForRegistrationComplete.aspx.designer.cs">
+      <DependentUpon>ThecardForRegistrationComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\ThecardForCustomerInformation.aspx.cs">
+      <DependentUpon>ThecardForCustomerInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\ThecardForCustomerInformation.aspx.designer.cs">
+      <DependentUpon>ThecardForCustomerInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\BhandsForCustomerInformation.aspx.cs">
+      <DependentUpon>BhandsForCustomerInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\BhandsForCustomerInformation.aspx.designer.cs">
+      <DependentUpon>BhandsForCustomerInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\CPClientReturnProcessOnly.aspx.cs">
+      <DependentUpon>CPClientReturnProcessOnly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\CPClientReturnProcessOnly.aspx.designer.cs">
+      <DependentUpon>CPClientReturnProcessOnly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\IPINReturnProcess.aspx.cs">
+      <DependentUpon>IPINReturnProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\IPINReturnProcess.aspx.designer.cs">
+      <DependentUpon>IPINReturnProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Member\CPClientReturnProcess.aspx.cs">
+      <DependentUpon>CPClientReturnProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\CPClientReturnProcess.aspx.designer.cs">
+      <DependentUpon>CPClientReturnProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\SignInForCertification.aspx.cs">
+      <DependentUpon>SignInForCertification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\SignInForCertification.aspx.designer.cs">
+      <DependentUpon>SignInForCertification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\SignInForEnterCustomerInformation.aspx.cs">
+      <DependentUpon>SignInForEnterCustomerInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\SignInForEnterCustomerInformation.aspx.designer.cs">
+      <DependentUpon>SignInForEnterCustomerInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\SignInForExistingMember.aspx.cs">
+      <DependentUpon>SignInForExistingMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\SignInForExistingMember.aspx.designer.cs">
+      <DependentUpon>SignInForExistingMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\SignInForRegistrationComplete.aspx.cs">
+      <DependentUpon>SignInForRegistrationComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\SignInForRegistrationComplete.aspx.designer.cs">
+      <DependentUpon>SignInForRegistrationComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\SignInForRegistrationCompleteForExistingMember.aspx.cs">
+      <DependentUpon>SignInForRegistrationCompleteForExistingMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\SignInForRegistrationCompleteForExistingMember.aspx.designer.cs">
+      <DependentUpon>SignInForRegistrationCompleteForExistingMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\SignInForTermsAgreementPreview.aspx.cs">
+      <DependentUpon>SignInForTermsAgreementPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\SignInForTermsAgreementPreview.aspx.designer.cs">
+      <DependentUpon>SignInForTermsAgreementPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\SignInForTermsAgreement_20170427.aspx.cs">
+      <DependentUpon>SignInForTermsAgreement_20170427.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\SignInForTermsAgreement_20170427.aspx.designer.cs">
+      <DependentUpon>SignInForTermsAgreement_20170427.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\SignInForTermsAgreement.aspx.cs">
+      <DependentUpon>SignInForTermsAgreement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\SignInForTermsAgreement.aspx.designer.cs">
+      <DependentUpon>SignInForTermsAgreement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyPage\UserProfileModify.aspx.cs">
+      <DependentUpon>UserProfileModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyPage\UserProfileModify.aspx.designer.cs">
+      <DependentUpon>UserProfileModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyPage\UserSecession.aspx.cs">
+      <DependentUpon>UserSecession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyPage\UserSecession.aspx.designer.cs">
+      <DependentUpon>UserSecession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyPage\UserSecessionComplete.aspx.cs">
+      <DependentUpon>UserSecessionComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyPage\UserSecessionComplete.aspx.designer.cs">
+      <DependentUpon>UserSecessionComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AbstractIntergrationProcessor.cs" />
+    <Compile Include="Service\AbstractServiceResult.cs" />
+    <Compile Include="Service\InMemRegistProcessor.cs" />
+    <Compile Include="Service\Member\CheckAvailableUser.ashx.cs">
+      <DependentUpon>CheckAvailableUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Member\ExecuteIntergrationProcessing.ashx.cs">
+      <DependentUpon>ExecuteIntergrationProcessing.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Member\ExecuteTransactionInfomation.ashx.cs">
+      <DependentUpon>ExecuteTransactionInfomation.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Member\InsertUserInfo.ashx.cs">
+      <DependentUpon>InsertUserInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Member\SelectUserInfo.ashx.cs">
+      <DependentUpon>SelectUserInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Member\UpdateUserInfo.ashx.cs">
+      <DependentUpon>UpdateUserInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\banner\AffiliatedBanner.ascx.cs">
+      <DependentUpon>AffiliatedBanner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\banner\AffiliatedBanner.ascx.designer.cs">
+      <DependentUpon>AffiliatedBanner.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service\Member\CheckAvailableUser.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service\Member\ExecuteTransactionInfomation.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service\Member\SelectUserInfo.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\Site.Master" />
+    <Content Include="packages.config" />
+    <Content Include="Master\SiteOne.Master" />
+    <Content Include="Master\GShop_SiteOne.Master" />
+    <Content Include="Resources\member\bg_welcome_m.psd" />
+    <None Include="Resource\css\bootstrap-tree.less" />
+    <None Include="Resource\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Resource\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Resource\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Resource\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Resource\fonts\NanumGothic-Bold.eot" />
+    <None Include="Resource\fonts\NanumGothic-Bold.ttf" />
+    <None Include="Resource\fonts\NanumGothic-Bold.woff" />
+    <None Include="Resource\fonts\NanumGothic-Bold.woff2" />
+    <None Include="Resource\fonts\NanumGothic-ExtraBold.eot" />
+    <None Include="Resource\fonts\NanumGothic-ExtraBold.ttf" />
+    <None Include="Resource\fonts\NanumGothic-ExtraBold.woff" />
+    <None Include="Resource\fonts\NanumGothic-ExtraBold.woff2" />
+    <None Include="Resource\fonts\NanumGothic-Regular.eot" />
+    <None Include="Resource\fonts\NanumGothic-Regular.ttf" />
+    <None Include="Resource\fonts\NanumGothic-Regular.woff" />
+    <None Include="Resource\fonts\NanumGothic-Regular.woff2" />
+    <Content Include="Service\Member\InsertUserInfo.ashx" />
+    <Content Include="Service\Member\ExecuteIntergrationProcessing.ashx" />
+    <Content Include="Service\Member\UpdateUserInfo.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

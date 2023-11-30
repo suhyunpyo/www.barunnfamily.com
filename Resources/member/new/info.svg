@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <path data-name="16*16" style="fill:none" d="M0 0h16v16H0z"/>
+    <path data-name="Ellipse 69" d="M7 1a6 6 0 1 0 6 6 6.007 6.007 0 0 0-6-6m0-1a7 7 0 1 1-7 7 7 7 0 0 1 7-7z" transform="translate(1 1)" style="fill:#d32f2f"/>
+    <g data-name="타원 70" transform="translate(7.25 10.25)" style="fill:#fff;stroke:#d32f2f">
+        <circle cx=".75" cy=".75" r=".75" style="stroke:none"/>
+        <circle cx=".75" cy=".75" r=".25" style="fill:none"/>
+    </g>
+    <rect data-name="사각형 231" width="1" height="5" rx=".5" transform="translate(7.5 4.5)" style="fill:#d32f2f"/>
+</svg>

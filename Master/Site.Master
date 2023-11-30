@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BarunnIntergrationService.Master.Site" ClientIDMode="Static" %>
+<!DOCTYPE html>
+<html lang="ko">
+<head runat="server">
+    <%="\n" %>
+    <asp:Literal ID="ltrMasterPageMetaTag" runat="server"></asp:Literal>
+
+    <title>바른 ONE 회원가입</title><%="\n" %>
+
+    <asp:ContentPlaceHolder ID="cphStyleSheet" runat="server">
+    <link rel="stylesheet" type="text/css" href="/resources/css/common_origin.css"><%="\n" %>
+    <link rel="stylesheet" type="text/css" href="/resources/css/layout_member_origin.css"><%="\n" %>
+    </asp:ContentPlaceHolder>
+    
+    <asp:Literal ID="ltrMasterPageStyleSheet" runat="server"></asp:Literal>
+
+    <script type="text/javascript" src="/resources/js/jquery_1.9.1.min.js"></script><!-- 확인:jquery 버젼 정의 -->
+    <script type="text/javascript" src="/resources/js/common.js"></script><!-- 개발 JS 정의 -->
+    <script type="text/javascript" src="/resources/js/common_ux.js"></script><!--  publish JS 정의 -->
+    <script type="text/javascript" src="/resources/js/ui/jquery.ezmark.min.js"></script><!-- 라디오,체크 -->
+    <script type="text/javascript" src="/resources/js/ui/jquery.banner.js"></script><!-- 롤링배너 -->
+    <script type="text/javascript" src="/resources/js/ui/jquery.selectric.min.js"></script><!-- select -->
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+<body class="welcome_p" ID="MasterBody" runat="server">
+
+    <form id="MainForm" name="MainForm" runat="server" method="post">
+
+<% /* 엔터키 자동 SUBMIT 방지 */ %>
+<div style="display:none;">
+    <asp:Button ID="btnNull" runat="server" OnClientClick="return false" />
+</div>
+<% /* //엔터키 자동 SUBMIT 방지 */ %>
+
+        <div class="wrap">
+
+            <div class="head_a">
+		        <div class="head_a_in">
+<%--			        <div class="ci">
+				        <a href="/"><img src="/resources/img_inc/logo_barunn.png" alt="바른컴퍼니"></a>
+			        </div>--%>
+			        <div class="bi">
+                        <asp:Literal ID="ltrRefererLogo" runat="server"></asp:Literal>
+                        <!--
+				        <a href="http://www.barunsoncard.com/" target="_blank"><img src="/resources/img_inc/logo_barunsoncard.png" alt="바른손카드"></a>
+				        <a href="http://www.bhandscard.com/" target="_blank"><img src="/resources/img_inc/logo_bhandscard.png" alt="비핸즈카드"></a>
+				        <a href="http://www.thecard.co.kr/" target="_blank"><img src="/resources/img_inc/logo_thecard.png" alt="더카드"></a>
+				        <a href="http://www.premierpaper.co.kr/" target="_blank"><img src="/resources/img_inc/logo_premierpaper.png" alt="프리미어페이퍼"></a>
+				        <a href="http://www.celemo.co.kr/" target="_blank"><img src="/resources/img_inc/logo_celemo.png" alt="셀레모"></a>
+                        -->
+			        </div>
+		        </div>
+	        </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        
+            <div class="foot_a">
+		        <div class="foot_a_in">
+			        <p>Copyright <strong>㈜바른컴퍼니</strong> All rights Reserved.</p>
+		        </div>
+	        </div>
+
+        </div>
+    </form>
+
+    <asp:Literal ID="ltrMasterPageCPClientRequestForm" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrMasterPageCPClientResponseForm" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrMasterPageIPINRequestForm" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrMasterPageIPINResponseForm" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrMasterPageTemporaryField" runat="server"></asp:Literal>
+
+    <asp:Literal ID="ltrBizSpringLoggerScriptForRegistrationComplete" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrBizSpringLoggerScript" runat="server"></asp:Literal>
+
+</body>
+</html>

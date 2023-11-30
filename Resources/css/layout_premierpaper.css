@@ -1,0 +1,162 @@
+﻿@charset "UTF-8";
+
+
+
+
+.agreeall_a label strong{ font-size: 16px !important}
+.step_a{ margin: 0 auto; background-image:none;}
+
+
+b, strong { font-weight: normal; color:#193964 !important}
+.term_s .term_b > h2 {font-size: 14px !important}
+.term_s .term_b > h5 {font-size: 12px !important}
+
+
+
+/*선택아이콘*/
+.input_b .ez-checkbox {background-image: url(/resources/img_inc/set_check_new_premierpaper.png);}
+
+
+
+/*가입하기 버튼*/
+.b_btn.type2 { background-color: #000;}
+.b_btn.type2.right span {height:60px;line-height:60px;font-size:16px;background: none;text-align:center;color:#fff;min-width: 600px;}
+.b_btn.type2.right_Page02 span {height:60px;line-height:60px;font-size:16px;background: none;text-align:center;color:#fff;min-width: 300px;}
+.b_btn.type2.left span {height:60px;line-height:60px;font-size: 16px;background: none; text-align:center;color:#000;min-width:300px;}
+.b_btn.type2.left span { background-color: #f6f6f6 !important}
+.b_btn.type3 {background-color: #000 !important}
+
+
+
+/* content 영역
+----------------------- */
+.cont_a {background-color: #ffffff;text-align:center;padding:40px 0 50px 0;}
+
+
+
+/* 약관동의 페이지만 적용 */
+.cont_a_in.check_all_area {width:940px;background-color: #fff;padding:40px;border: 1px solid #ddd;}
+
+
+/* step2 */
+.cont_a h3 { font-size: 16px; font-weight:bold; color:#000 !important} 
+.cont_a p { font-size: 14px;}
+.cont_a { font-size: 14px;}
+
+
+
+/* notice Style 정의
+----------------------- */
+.b_noti01 li { text-align:left; font-size:14px;background:url('/resources/img_inc/bul_4x2.png') no-repeat 5px 7px; padding-left:15px; padding-bottom:10px;}
+.noti_mark {background:url('/resources/img_inc/icon_mark_premierpaper.png') no-repeat 20px 50%; text-align:left; font-size:14px; padding-left:40px;}
+.noti_email {margin-top:10px;}
+	.noti_email p {font-size:14px; padding-left:25px; margin-top:5px;}
+
+/*mark 정의*/
+	.b_dtable_1 dt.mark {background:url('/resources/img_inc/icon_mark_premierpaper.png') no-repeat 20px 50%;}
+	
+	
+
+/* form check,radio 정의
+----------------------- */
+/*기본세팅*/
+.ez-hide { opacity:0; filter:alpha(opacity=0);}
+	.input_b {display:inline-block; #display:inline; zoom:1; vertical-align:middle}
+	.input_b .ez-checkbox,.input_b .ez-radio { display:inline-block; #display:inline; zoom:1; margin-right:5px; background-image:url('/resources/img_inc/set_check_new_premierpaper.png'); background-repeat:no-repeat; vertical-align:top}
+	.input_b .ez-checkbox+label, .input_b .ez-radio+label,
+	.input_b .ez-checkbox input,.input_b .ez-radio input {cursor:pointer}	
+	
+	
+	
+	
+/* step 02 박스 정의*/
+.head_a_in,.cont_a_in,.familysite_a_in,.step_a_in {width: 700px;margin:0 auto;}
+	.b_dtable_1 dl {border-bottom: 1px solid #f6f6f6;}
+
+
+
+/*회원가입완료
+--------------------------*/
+.apcom_p {word-break:keep-all}
+.apcom_p .cont_a { padding-bottom:0;}
+.apcom_p .cont_a_in { background:none; text-align:left; padding:40px 0 50px 0}
+.apcom_p .cont_a .tit { margin-left:500px; margin-top:40px; font-size:28px; line-height:1.6}
+.apcom_p .cont_a .txt { margin-left:500px;width:400px;font-size:18px; margin-top:46px; line-height:1.6}
+.apcom_p .cont_a .b_btn_a { display:inline-block;  margin-top:50px;}
+.apcom_p .cont_a .b_btn_a_last { margin: 0 auto; width: 100% !important;}
+.apcom_p.member_c .step_a_in .tit+ul { display:none}
+
+.end_wrap .b_btn_a {
+    margin-left: 0px !important;
+    margin-bottom: 50px;
+}
+
+
+/* 모바일 정보입력 재정의 */
+@media screen and (max-width: 1100px) {
+    .head_a_in, .cont_a_in, .familysite_a_in, .step_a_in {
+    width: auto !important;}
+}
+
+@media screen and (max-width: 700px){
+.b_dtable_1 dt.mark p {
+    background:none;
+	padding-left: 40px;}
+}
+	
+@media screen and (max-width: 650px) {
+.b_btn_a_last { 
+	width:200px !important;
+
+	}		
+.apcom_p .b_btn.type2 {width:40% !important;}
+}
+
+
+@media screen and (max-width: 650px) {
+.b_btn.type2.right span {text-indent:0 !important; font-size:16px; letter-spacing:0 !important}
+}
+
+@media screen and (max-width: 375px) {
+	.step_a_in ul li img { width:50% !important; padding:8px 0 5px 0;}
+	.cont_a .step03_img { margin-top::5px !important;}
+	.cont_a .step03_img img {width:100%;}
+}
+
+
+
+
+
+/*스텝
+------------------------------------------*/
+.step_a {background:#fff; padding-top: 50px;}
+	.step_a_in { width:1024px; text-align:center;} 
+	.step_a_in .tit { padding:35px 0; border-top: 3px solid #000;}
+	.step_a_in .tit+ul {height:1%; overflow:hidden;}
+	.step_a_in ul li { width:33.1%; background-color:#f6f6f6; float:left; margin-left:1px;}
+	.step_a_in ul li:first-child { margin-left:0;}
+	.step_a_in ul li img { width:20%; padding:8px 0 5px 0;}
+	.step_a_in ul li.on {width:33.1%; background-color:#f6f6f6;}
+
+
+
+
+.b_dtable_1 dt.mark p {
+    background: url('/resources/img_inc/icon_mark_premierpaper.png') no-repeat 20px 50% !important;
+}
+
+body {
+    background-color: #fff;
+}
+
+
+.premier-step {
+    padding: 8px 0 5px 0;
+    font-size: 13.5px;
+    color: #aaa
+}
+
+    .premier-step.on {
+        color: #555;
+        font-weight:bold;
+    }

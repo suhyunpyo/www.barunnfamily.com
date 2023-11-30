@@ -1,0 +1,35 @@
+﻿@charset "UTF-8";
+/* 페이지가 "euc-kr에서는 [ @charset "euc-kr"; ]를 정의해야한다 */
+/************************************************************************
+ * 설명         : OOOOOOO
+************************************************************************/
+
+/*■■■■재정의■■■■*/
+
+
+/*■■■■공통정의■■■■*/
+
+
+/*■■■■페이지별정의■■■■*/
+/*회원정보수정
+--------------------------*/
+.mmodi_p .noti_mark { margin-top:20px;}
+
+/*회원탈퇴
+--------------------------*/
+.mleave_p .cont_a { padding-bottom:30px; padding-top:0; word-break:keep-all;}
+.mleave_p .cont_a_in { background-color:#fff; padding-bottom:50px; padding-top:50px;}
+	.mleave_p .leave_noti {margin-left:100px; text-align: left;}
+	.mleave_p .leave_noti .b_noti01 { margin-top:20px;}
+	.mleave_p .leave_noti .b_noti01 strong { color:#df2f4b;}
+	.mleave_p .reason_a { background-color:#3f86da; border-radius:10px; width:820px; margin:0 auto; margin-top:40px; padding:30px 40px; text-align:left; color:#fff;}
+	.mleave_p .reason_a ul li { float:left; width:50%; margin-bottom:10px;}
+	.mleave_p .reasonetc_a {background-color:#3073c1; border:1px solid #225da1; padding:5px;}
+	.mleave_p .reasonetc_a textarea,
+	.mleave_p .reasonetc_a textarea.jtxton { height:100px; background-color:transparent !important; border:none !important; color:#fff !important; font-size:14px;}
+/*회원탈퇴완료
+--------------------------*/
+.mleave_p .goodbye_txt p.tit { margin-top:25px;}
+.mleave_p .goodbye_txt p.tit+p { margin-top:72px; font-size:22px;background:url('/resources/img_inc/line_40x1.png') no-repeat 50% bottom; padding-bottom:20px;}
+.mleave_p .goodbye_txt p.tit+p strong { color:#333;}
+.mleave_p .goodbye_txt p.tit+p+p { margin-top:47px; line-height:2}

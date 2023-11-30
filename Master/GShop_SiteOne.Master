@@ -1,0 +1,239 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GShop_SiteOne.master.cs" Inherits="BarunnIntergrationService.Master.GShop_SiteOne" ClientIDMode="Static"  %>
+<!DOCTYPE html>
+<html lang="ko">
+<head runat="server">
+    <%="\n" %>
+    <asp:Literal ID="ltrMasterPageMetaTag" runat="server"></asp:Literal>
+
+    <title>BarunsonGshop - 회원가입</title><%="\n" %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <asp:Literal ID="ltrMasterPageStyleSheet" runat="server"></asp:Literal>
+
+    <script type="text/javascript" src="/resources/js/jquery_1.9.1.min.js"></script><!-- 확인:jquery 버젼 정의 -->
+    <script type="text/javascript" src="/resources/js/common.js"></script><!-- 개발 JS 정의 -->
+
+    <script type="text/javascript" src="/resources/js/ui/jquery.ezmark.min.js"></script><!-- 라디오,체크 -->
+    <script type="text/javascript" src="/resources/js/ui/jquery.banner.js"></script><!-- 롤링배너 -->
+    <script type="text/javascript" src="/resources/js/ui/jquery.selectric.min.js"></script><!-- select -->
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <style type="text/css">
+        
+@media screen and (max-width:1200px){
+	#wrap {background: #fff;}
+	#wrap .header {padding:20px 0;}
+	.register_box {padding:0 3%; border: 0;}
+}
+@media screen and (max-width:475px){
+	.register .step_view li {margin-right: 60px;}
+	.register_text_wrap .register_text,
+	.find_text {font-size: 20px; line-height: 30px;}
+}
+@media screen and (max-width:320px){
+	.register .step_view li {margin-right: 40px;}
+}
+@media screen and  (min-width:280px) and (max-width:320px){
+	.register_text_wrap .sub_text {font-size: 13px; letter-spacing: -1px;}
+}
+    </style>
+
+</head>
+<body ID="MasterBody" runat="server">
+
+    <form id="MainForm" name="MainForm" runat="server" method="post">
+    <input type="hidden" name="userId" id="userId" runat="server" value="" />   
+
+
+<% /* 엔터키 자동 SUBMIT 방지 */ %>
+<div style="display:none;">
+    <asp:Button ID="btnNull" runat="server" OnClientClick="return false" />
+
+</div>
+<% /* //엔터키 자동 SUBMIT 방지 */ %>
+	<div id="wrap" class="sub">
+		<!-- header -->
+		<header class="header">
+			<div class="area">
+				<h1><a href="https://gsauth.barunsoncard.com/">BarunsonGshop 로고</a></h1>
+			</div>
+		</header>
+		<!-- //header -->
+		<div class="sub_contents">
+			<!-- register -->
+			<section class="register">
+				<div class="register_box">
+					    <div class="title_box">
+						<h2>회원가입</h2>
+						<!-- 회원가입 단계 -->
+						<div class="step_view">
+							<ol>
+								<!--
+									li class ="on" 추가 시 현재 단계 표시
+								-->
+								<li class="on">
+									<span>1</span>
+									<p><strong>본인인증</strong></p>
+								</li>
+								<li>
+									<span>2</span>
+									<p><strong>정보입력</strong></p>
+								</li>
+								<li>
+									<span>3</span>
+									<p><strong>가입완료</strong></p>
+								</li>
+							</ol>
+						</div>
+						<!-- //회원가입 단계 -->
+					</div>
+					    <!-- 회원가입 컨텐츠 -->
+					   <%-- <div class="register_contents">--%>
+                               
+
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                                    </asp:ContentPlaceHolder>
+
+                               <%-- <asp:Literal ID="ContentNavigation" runat="server"> </asp:Literal>--%>
+	                   <%-- </div>--%>
+                </div>
+            </section>
+        </div>
+     
+    </div>
+
+
+    </form>
+    <asp:Literal ID="ltrMasterPageCPClientRequestForm" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrMasterPageCPClientResponseForm" runat="server"></asp:Literal>
+
+    <asp:Literal ID="ltrBizSpringLoggerScriptForRegistrationComplete" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrBizSpringLoggerScript" runat="server"></asp:Literal>
+
+
+    <% /* // 공통 스크립트 전에 회원가입/주문등 들어가야되는 에이스 카운터 스크립트 넣기  */ %>
+    <asp:Literal ID="ltrScriptAceCounterTagBefore" runat="server"></asp:Literal>
+    <asp:Literal ID="ltrScriptAceCounterTag" runat="server"></asp:Literal>
+    <% /* //에이스 카운터 스크립트  */ %>
+    <script>
+        $(function () {
+	//header
+	$(window).scroll(function () {
+		var scrollTop = $(window).scrollTop();
+		var $header = $('.header');
+		var hedaerTop = $header.height();
+		if (scrollTop >= hedaerTop) {
+			$header.addClass('fixed');
+		} else {
+			$header.removeClass('fixed');
+		}
+	});
+
+	//all menu
+	$('.user_wrap .ico.menu').on('click', function () {
+
+		if ($(this).hasClass('close')) {
+			menuClose(wdSize);
+		} else {
+			menuOpen(wdSize);
+		}
+	});
+
+	$('.all_menu .close_btn, .mobile_menu_bg').on('click', function () {
+		menuClose(wdSize);
+	});
+
+	//user menu
+	$('.user_wrap .user').on('click', function () {
+		$('.user_menu').show();
+	});
+	$('html').on('click', function (e) {
+		if (!$(e.target).hasClass('user')) {
+			$('.user_menu').hide();
+		}
+		if (!$(e.target).hasClass('tip_btn')) {
+			$('.tip_box').removeClass('open');
+		}
+		
+	});
+
+
+	var filter = "win16|win32|win64|macintel|mac|"; // PC일 경우
+	if (navigator.platform) {
+		if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+			resizeR(); //mobile
+		} else {
+			$(window).bind('load resize', function () { resizeR(); }); //pc
+		}
+	}
+
+
+	function resizeR() {
+		wdSize = $(window).outerWidth();
+
+		resizeBr(wdSize);
+		initSwiper(wdSize);
+	}
+
+	//모바일 2차메뉴 이벤트
+	$('.all_menu_nav .menu_depth01 > li > a').on('click', function () {
+
+		if (wdSize <= mbSize) {
+			$(this).siblings('.menu_depth02').slideToggle(300);
+			$('.menu_depth01 > li > a').not(this).siblings('.menu_depth02').slideUp(300);
+			return false;
+		}
+	});
+
+	//family site event
+	$('.family_wrap').hover(function () {
+		$('.family_wrap > a').addClass('on');
+	}, function () {
+		$('.family_wrap > a').removeClass('on');
+	});
+
+	//탭메뉴 공통
+	$('.tab_wrap').each(function () {
+
+		$(this).find('.tab_ul li:eq(0)').addClass('active');
+		$(this).find('.tab_ul li').on('click', function () {
+
+			var tabIndex = $(this).index();
+			var $tabCon = $(this).parents('.tab_wrap').find('.tab_con').eq(tabIndex);
+
+			$(this).addClass('active').siblings('li').removeClass('active');
+			$tabCon.fadeIn().siblings('div').hide();
+
+		});
+	});
+
+	$('.pop_mask').on('click', function () {
+		popClose();
+	});
+
+	/** 툴팁 이벤트 **/
+	$('.tip_btn').on('click', function () {
+		$(this).parents('.tip_box').addClass('open');
+	});
+	/*
+	if (!$('#wrap').hasClass('mobile')) {
+		$('.tip_box').on('click', function () {
+			$(this).addClass('open');
+		});
+		$('.tip_box .ico.notice').on('click', function () {
+			$(this).parents('.tip_box').addClass('open');
+		});
+	} else {
+		$('.tip_btn').on('click', function () {
+			$(this).parents('.tip_box').addClass('open');
+		});
+    }
+	*/
+	
+
+});
+
+    </script>
+</body>
+</html>

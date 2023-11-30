@@ -1,0 +1,481 @@
+﻿@charset "UTF-8";
+/* 페이지가 "euc-kr에서는 [ @charset "euc-kr"; ]를 정의해야한다 */
+/************************************************************************
+ * 설명         : OOOOOOO
+************************************************************************/
+
+/*■■■■재정의■■■■*/
+
+
+/*■■■■공통정의■■■■*/
+
+
+/*■■■■페이지별정의■■■■*/
+.cont_a {
+}
+
+/*메인
+--------------------------*/
+.welcome_p .cont_a {
+    background: url('/resources/member/bg_welcome.jpg') repeat-x 50% top;
+    height: 690px;
+    padding: 0;
+}
+
+.welcome_p .cont_a_in {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 47px;
+}
+
+    .welcome_p .cont_a_in .subcopy {
+        margin-top: 40px;
+    }
+
+        .welcome_p .cont_a_in .subcopy + .tit {
+            margin-top: 14px;
+        }
+
+    .welcome_p .cont_a_in .b_btn_a {
+        text-align: left;
+    }
+
+.welcome_p .oneidinfo {
+    margin-top: 100px;
+    color: #fff;
+}
+
+    .welcome_p .oneidinfo .tit {
+        font-size: 22px;
+        border-bottom: 1px solid #d59494;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .welcome_p .oneidinfo .txt {
+        font-size: 18px;
+        color: #ffdad9;
+        margin-top: 20px;
+        line-height: 1.6;
+        word-break: keep-all;
+    }
+
+/*본인인증
+--------------------------*/
+.auth_p {
+    word-break: keep-all
+}
+
+    .auth_p .cont_a_in .tit + .txt {
+        margin-top: 40px;
+    }
+
+.authway_a {
+    width: 850px;
+    height: 1%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+    .authway_a .cont_a_in .tit + .txt {
+        margin-top: 40px;
+    }
+
+    .authway_a dl {
+        float: left;
+    }
+
+        .authway_a dl + dl {
+            margin-left: 10px;
+        }
+
+        .authway_a dl a {
+            display: block;
+            width: 400px;
+            height: 320px;
+            background-color: #fff;
+            border: 10px solid #fff;
+            padding-top: 30px;
+        }
+
+            .authway_a dl a:hover {
+                border-color: #3f86da;
+            }
+
+    .authway_a:hover dl dt,
+    .authway_a:hover dl dd img {
+        -webkit-filter: opacity(40%) grayscale(90%);
+        filter: opacity(40%) grayscale(90%);
+    }
+
+    .authway_a dl:hover dt,
+    .authway_a dl:hover dd img {
+        -webkit-filter: opacity(100%) grayscale(0%);
+        filter: opacity(100%) grayscale(0%);
+    }
+
+    .authway_a dl dt {
+        font-size: 26px;
+        letter-spacing: -3px;
+        margin-top: 20px;
+    }
+
+        .authway_a dl dt + dd {
+            color: #999999;
+            letter-spacing: -2px;
+            margin-top: 5px;
+        }
+
+            .authway_a dl dt + dd strong {
+                color: #666666
+            }
+
+.failnoti_a {
+    margin-top: 50px;
+}
+
+    .failnoti_a dt {
+        font-size: 22px;
+        color: #3f86da;
+        background: url('/resources/img_inc/line_20x1.png') no-repeat 50% bottom;
+        padding-bottom: 10px;
+    }
+
+    .failnoti_a dd {
+        margin-top: 20px;
+    }
+
+/*ID가 있는경우*/
+.condition_noti {
+    font-size: 22px;
+}
+
+.selectid_b {
+    width: 850px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background-color: #3f86da;
+    color: #fff;
+    padding: 30px 5px 5px 5px
+}
+
+    .selectid_b .date_info {
+        font-size: 16px;
+    }
+
+        .selectid_b .date_info + p {
+            font-size: 20px;
+            color: #ffde00;
+            margin-top: 25px;
+        }
+
+    .selectid_b .id_list {
+        margin-top: 20px;
+        background-color: #fff;
+    }
+
+        .selectid_b .id_list dl {
+            height: 1%;
+            overflow: hidden;
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+            .selectid_b .id_list dl.mark {
+                background: url('/resources/member/img_selectid.png') no-repeat right 50%;
+                background-color: #fff;
+            }
+
+        .selectid_b .id_list dt,
+        .selectid_b .id_list dd {
+            float: left;
+            height: 75px;
+            line-height: 75px
+        }
+
+        .selectid_b .id_list dt {
+            width: 190px;
+            color: #000;
+            text-align: left;
+        }
+
+            .selectid_b .id_list dt .input_b {
+                margin-left: 30px;
+            }
+
+        .selectid_b .id_list.oneid dl {
+            display: inline-block;
+            border-bottom: none;
+        }
+
+        .selectid_b .id_list.oneid dt {
+            width: auto;
+            padding-right: 20px;
+        }
+
+        .selectid_b .id_list.oneid dd.date {
+            width: auto;
+            padding-right: 20px;
+        }
+
+        .selectid_b .id_list.oneid dd.id {
+            width: auto;
+        }
+
+        .selectid_b .id_list dt label {
+            background-color: #f1f1f1;
+            border-radius: 6px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .selectid_b .id_list dd {
+            text-align: left;
+            color: #666666;
+        }
+
+            .selectid_b .id_list dd.date {
+                width: 150px;
+            }
+
+            .selectid_b .id_list dd.id {
+                width: 250px;
+            }
+    /*아이디입력*/
+    .selectid_b .anotherid_a {
+        background-color: #f5f5f5;
+        clear: both;
+        text-align: left;
+        padding: 20px 0 20px 55px;
+    }
+
+        .selectid_b .anotherid_a .txt {
+            color: #666;
+            font-size: 14px;
+            padding-bottom: 20px;
+            line-height: 1.4
+        }
+
+            .selectid_b .anotherid_a .txt strong {
+                color: #df2f4b;
+            }
+
+        .selectid_b .anotherid_a input {
+            height: 38px;
+            line-height: 38px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding-left: 5px;
+        }
+
+            .selectid_b .anotherid_a input.jtxtoff {
+                background-color: #fff !important;
+            }
+
+        .selectid_b .anotherid_a span.noti {
+            font-size: 14px;
+            color: #cc3333;
+            padding-left: 10px;
+        }
+
+    /*사용불가 아이디인경우*/
+    .selectid_b .id_list dl.not.mark {
+        background-image: none;
+    }
+
+        .selectid_b .id_list dl.not.mark dd.id strong {
+            color: #df2f4b;
+        }
+
+
+
+/*약관동의
+--------------------------*/
+.agreeall_a {
+}
+
+    .agreeall_a label strong {
+        font-size: 22px;
+        position: relative;
+        top: 2px;
+        letter-spacing: -1px;
+    }
+
+    .agreeall_a .input_b {
+        float: left;
+        margin-left: 5px;
+    }
+
+    .agreeall_a .b_btn_a {
+        float: right;
+        margin-top: 0;
+    }
+
+.term_s {
+    margin-top: 17px;
+}
+
+    .term_s .set_tit {
+        background-color: #3779d1;
+        padding: 10px;
+        color: #fff;
+    }
+
+        .term_s .set_tit h1 {
+            font-size: 20px;
+        }
+
+            .term_s .set_tit h1 + p {
+                margin-top: 10px;
+                color: #b7d6ff;
+                font-size: 14px;
+                word-break: keep-all
+            }
+
+    .term_s .info_barun {
+        text-align: left;
+        padding-bottom: 40px;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        margin-bottom: 40px;
+    }
+
+        .term_s .info_barun li {
+            padding: 3px 0;
+        }
+
+    .term_s .input_box_a {
+        padding: 4px 15px 15px 15px;
+        border: 1px solid #ccc;
+        border-top: none;
+        color: #333;
+        background-color: #f9f9f9
+    }
+
+    /*약관박스*/
+    .term_s .term_b a {
+        color: #3779d1;
+        text-decoration: underline;
+    }
+
+    .term_s .term_b .detail {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+    .term_s .term_b {
+        text-align: left;
+        padding-bottom: 40px;
+    }
+
+        .term_s .term_b .input_b {
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+
+        .term_s .term_b > h2 {
+            font-size: 18px;
+            color: #333333;
+            letter-spacing: -1px
+        }
+
+            .term_s .term_b > h2 strong {
+                color: #df2f4b;
+            }
+
+        .term_s .term_b .txt_a {
+            height: 250px;
+            margin-top: 10px;
+            overflow-y: scroll;
+            background-color: #fff;
+            border: 1px solid #cccccc;
+            padding: 0 20px 20px 20px;
+            font-size: 14px;
+        }
+
+            .term_s .term_b .txt_a h2 {
+                font-size: 16px;
+                color: #333;
+                font-weight: bold;
+            }
+        /*약관-on,off*/
+        .term_s .term_b.off.offfirst_b {
+            border-top: 1px solid #ccc
+        }
+
+        .term_s .term_b.off .input_b {
+            position: absolute;
+            right: 0;
+            top: 13px;
+        }
+
+        .term_s .term_b.off {
+            position: relative;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+
+            .term_s .term_b.off .txt_a {
+                display: none;
+            }
+
+            .term_s .term_b.off:first-child {
+                border: 10px solid red !important
+            }
+    /*삼성전자약관*/
+    .term_s.samsung_s {
+        margin-bottom: 40px;
+    }
+
+    .term_s + .b_btn_a {
+        margin-top: 0;
+    }
+
+/*회원가입완료
+--------------------------*/
+.apcom_p {
+    word-break: keep-all
+}
+
+    .apcom_p .cont_a {
+        padding-bottom: 0;
+    }
+
+    .apcom_p .cont_a_in {
+        background: url('/resources/member/bg_applycom.jpg') no-repeat left top;
+        text-align: left;
+        padding: 40px 0 50px 0
+    }
+
+    .apcom_p .cont_a .tit {
+        margin-left: 500px;
+        margin-top: 40px;
+        font-size: 28px;
+        line-height: 1.6
+    }
+
+    .apcom_p .cont_a .txt {
+        margin-left: 500px;
+        width: 400px;
+        font-size: 18px;
+        margin-top: 46px;
+        line-height: 1.6
+    }
+
+    .apcom_p .cont_a .b_btn_a {
+        display: inline-block;
+        margin-left: 500px;
+        margin-top: 50px;
+    }
+
+    .apcom_p.member_c .step_a_in .tit + ul {
+        display: none
+    }
+    /*롤링배너*/
+    .apcom_p .affiliated_join {
+        margin-top: 110px;
+    }

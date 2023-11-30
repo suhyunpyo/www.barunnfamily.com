@@ -1,0 +1,78 @@
+﻿@charset "UTF-8";
+/* 페이지가 "euc-kr에서는 [ @charset "euc-kr"; ]를 정의해야한다 */
+/************************************************************************
+ * 설명         : 시스템점검페이지
+************************************************************************/
+/*■■■■재정의■■■■*/
+
+
+/*■■■■페이지별정의■■■■*/
+/*시스템점검페이지
+-------------------------------*/
+.systemcheck_p .animated {
+	background-repeat: no-repeat;
+  /* The animation part: */
+    animation-duration: 6s; 
+    animation-fill-mode: both;
+    animation-name: rotateInUpRight;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.systemcheck_p .animated2 { 
+	background-repeat: no-repeat;
+  /* The animation part: */
+    animation-duration: 6s; 
+    animation-fill-mode: both;
+    animation-name: rotateInUpRight2;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+} 
+
+@keyframes rotateInUpRight {
+    from { 
+        transform-origin: 15px 15px; 
+        transform: rotate(0); 
+    } 
+    to { 
+        transform-origin: 15px 15px; 
+        transform: rotate(360deg); 
+    } 
+}
+@keyframes rotateInUpRight2 {
+    from { 
+        transform-origin:left top; 
+        transform: rotate(0); 
+    } 
+    to { 
+        transform-origin: left top;
+        transform: rotate(-360deg); 
+    } 
+} 
+.systemcheck_p .mglass_a { width:76px; height:74px; position:absolute; left:40%; top:45px;}
+
+body.systemcheck_p  {background:url('/resources/systemcheck/bg_01.png') repeat left top;}
+.systemcheck_p .wrap { width:670px; height:600px; min-width:670px; min-height:600px; left:50%; top:50%; margin-left:-345px; margin-top:-300px; position:absolute;}
+@media all and (max-height:600px) {
+.systemcheck_p .wrap {top:0; padding-top:10px; margin-top:0;}
+}
+@media all and (max-width:670px) {
+.systemcheck_p .wrap {left:0;margin-left:0;}
+}
+.systemcheck_p .hc_a {background:url('/resources/systemcheck/img_headcopy.png') no-repeat left top; height:60px;}
+	.bhands.systemcheck_p .hc_a { background-position:50% 0;}/*비*/
+	.barunson.systemcheck_p .hc_a { background-position:50% -100px;}/*바*/
+	.thecard.systemcheck_p .hc_a { background-position:50% -200px;}/*더*/
+	.premier.systemcheck_p .hc_a { background-position:50% -300px;}/*프*/
+	.celemo.systemcheck_p .hc_a { background-position:50% -400px;}/*셀*/
+	.barunn.systemcheck_p .hc_a { background-position:50% -500px;}/*바른컴퍼니*/
+.systemcheck_p .info_a { background-color:#3f86da; text-align:center; position:relative; padding:20px 0 30px 0;}
+.systemcheck_p .info_a .monitor { position:relative; width:201px; margin:0 auto;}
+.systemcheck_p .info_a .monitor .logo { width:80px; height:12px; position:absolute; left:37px; top:22px;background:url('/resources/systemcheck/img_minilogo.png') no-repeat left top;}
+	.bhands.systemcheck_p .info_a .monitor .logo { background-position:50% 0;}/*비*/
+	.barunson.systemcheck_p .info_a .monitor .logo { background-position:50% -30px;}/*바*/
+	.thecard.systemcheck_p .info_a .monitor .logo { background-position:50% -60px;}/*더*/
+	.premier.systemcheck_p .info_a .monitor .logo { background-position:50% -90px;}/*프*/
+	.celemo.systemcheck_p .info_a .monitor .logo { background-position:50% -120px;}/*셀*/
+	.barunn.systemcheck_p .info_a .monitor .logo { background-position:50% -150px;}/*바른컴퍼니*/
+.systemcheck_p .info_a .text_info { font:16px/1.6 '맑은 고딕', 'Malgun Gothic', '나눔고딕', 'NanumGothic', 'NanumGothicWEB', '돋움', Dotum, '굴림', Gulim, sans-serif; color:#fff; text-align:left; padding-left:140px;padding-right:140px;}
+.systemcheck_p .fc_a { margin-top:40px;}
